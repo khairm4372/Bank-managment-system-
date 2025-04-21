@@ -1,0 +1,16 @@
+// Function to create a new account
+void createAccount() {
+    Account newAccount;
+    cout << "\nEnter account number: ";
+    cin >> newAccount.accountNumber;
+    cin.ignore(); // To ignore the newline left by previous input
+    cout << "Enter account holder name: ";
+    getline(cin, newAccount.accountHolderName);
+    newAccount.balance = 0.0f;
+
+    accounts[accountCount] = newAccount;
+    accountCount++;
+
+    cout << "Account created successfully!" << endl;
+    saveAccountData();
+}
